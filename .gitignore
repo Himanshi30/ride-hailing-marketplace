@@ -1,0 +1,44 @@
+# Environment secrets — never commit real credentials
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Spark / Iceberg local runs
+*.crc
+_SUCCESS
+metastore_db/
+spark-warehouse/
+derby.log
+
+# Airflow local runs
+airflow/logs/
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/webserver_config.py
+
+# Terraform
+infrastructure/.terraform/
+infrastructure/*.tfstate
+infrastructure/*.tfstate.backup
+infrastructure/.terraform.lock.hcl
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# Docker
+docker-compose.override.yml
+
+# macOS
+.DS_Store
+
+# PyCharm / IDE
+.idea/
+*.iml
