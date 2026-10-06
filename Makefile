@@ -33,3 +33,13 @@ scaffold:
 	touch .env.example
 	touch docker-compose.yml
 	@echo "Scaffold complete"
+
+
+up:
+	docker compose up -d
+down:
+	docker compose down
+logs:
+	docker compose logs -f kafka
+reset:
+	docker compose down -v
